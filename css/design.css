@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* CSS Document */
+body{
+	font-family: 'Sawarabi Gothic',"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", "Osaka-mono", "monospace";
+	margin: 0 auto;
+	width: 100%;
+	line-height: normal;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+header{
+	padding-bottom: 30px;
+}
+#top{
+	display: block;
+	position: fixed;
+	margin: 0 auto;
+	width:100%;
+	z-index: 1;
+background-color:rgba(255,255,255,0.8);
+}
+.slider{
+	padding-top: 10%;
+}
+
+h1{
+	padding: 20px 0 0;
+	font-weight: 600;
+	text-align: center;
+	display: block;
+	
+}
+h1 img{
+	width: 15%;
+}
+h2{
+	font-size:1.2em;
+	font-weight: bold;
+	text-indent: inherit;
+	color:#E554B4;
+	padding-bottom: 5px;
+}
+h3{
+	text-align: left;
+	font-weight: bold;
+	color: #737373;
+	padding-bottom: 10px;
+	padding-top: 30px;
+}
+.text{
+	width: 85%;
+}
+nav{
+	margin: 20px 0 10px;
+text-align: center;
+}
+nav ul{
+margin: 0 ;
+padding: 0 ;
+}
+nav li{
+list-style: none;
+display: inline-block;
+width: 10%;
+min-width: 90px;
+}
+nav li:not(:last-child){
+border-right:2px solid #ddd;
+}
+nav a{
+text-decoration: none;
+color: #333;
+}
+nav a.current{
+color: #00B0F0;
+border-bottom:2px solid #00B0F0;
+}
+nav a:hover{
+color:#E554B4;
+border-bottom:2px solid #E554B4;
+}
+.under_contents{
+	margin: 0 auto;
+	width: 100%;
+	background-image: url("../images/background.png");
+	background-size: 15%;
+	box-sizing: border-box;
+	padding:15px 30px;
+}
+.under_contents div{
+	width: 98%;
+	max-width: 980px;
+	margin: 0 auto;
+	height: auto;
+	text-align: center;
+	margin-top:30px;
+	margin-bottom: 30px;
+	padding:30px;
+	background: #ffffff;
+	border-radius: 10px;
+	box-sizing: border-box;
+	
+}
+.under_contents p,.under_contents li{
+	text-align: left;
+	margin: 0 auto; 
+}
+.under_contents li{
+	list-style: none;
+}
+table{
+	margin-bottom: 10px;
+}
+table tbody td,th{
+	text-align: left;
+	border: solid 1px #464646;
+}
+tr{
+	width: 60%;
+	
+}
+th{
+	width: 15%;
+	padding:15px;
+	color: #ffffff;
+	background:#5E5E5E;}
+td{
+	width: 70%;
+	padding: 15px;
+}
+.surcle_all{
+	box-sizing: border-box;
+padding: 10px;
+	display: flex;
+	flex-flow: wrap;
+}
+.surcle_all div{
+	width: 20%;
+	padding: 0 5px;
+}
+.button{
+	position: fixed;
+	bottom: 8%;
+	right:0;
+	background-image: url("../images/waiwoositemi.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:auto;
+	min-width: 20%;
+	height: 15%;
+	color:
+rgba(0,0,0,0.00);
+}
+.button:hover{
+	background-image: url("../images/ueniikude.svg");
+}
+footer{
+	width: 100%;
+	　margin: 30px;
+	padding: 10px;
+	background:#ffffff;
+	font-size: 10pt;
+	text-align: center;
+}
+
+  /*300px以上で適用する内容*/
+}@media screen and (max-width:300px){
+	.slider{
+	padding-top: 30%;
+}
+  /*300px以上で適用する内容*/
+}
+
+@media screen and (max-width:600px){
+  .slider{
+	padding-top: 20%;
+}/*600px以上で適用する内容*/
+	
+}
+
+
+@media screen and (max-width:1200px){
+  .slider{
+	padding-top: 15%;
+}/*600px以上で適用する内容*/
+	
+}
