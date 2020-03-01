@@ -1,189 +1,178 @@
-@charset "UTF-8";
-/* CSS Document */
-body{
-	font-family: 'Sawarabi Gothic',"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", "Osaka-mono", "monospace";
-	margin: 0 auto;
-	width: 100%;
-	line-height: normal;
-}
-img{
-	width: 100%;
-	height: auto;
-}
-header{
-	padding-bottom: 30px;
-}
-#top{
-	display: block;
-	position: fixed;
-	margin: 0 auto;
-	width:100%;
-	z-index: 1;
-background-color:rgba(255,255,255,0.8);
-}
-.slider{
-	padding-top: 10%;
-}
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>十色net</title>
 
-h1{
-	padding: 20px 0 0;
-	font-weight: 600;
-	text-align: center;
-	display: block;
-	
-}
-h1 img{
-	width: 15%;
-}
-h2{
-	font-size:1.2em;
-	font-weight: bold;
-	text-indent: inherit;
-	color:#E554B4;
-	padding-bottom: 5px;
-}
-h3{
-	text-align: left;
-	font-weight: bold;
-	color: #737373;
-	padding-bottom: 10px;
-	padding-top: 30px;
-}
-.text{
-	width: 85%;
-}
-nav{
-	margin: 20px 0 10px;
-text-align: center;
-}
-nav ul{
-margin: 0 ;
-padding: 0 ;
-}
-nav li{
-list-style: none;
-display: inline-block;
-width: 10%;
-min-width: 90px;
-}
-nav li:not(:last-child){
-border-right:2px solid #ddd;
-}
-nav a{
-text-decoration: none;
-color: #333;
-}
-nav a.current{
-color: #00B0F0;
-border-bottom:2px solid #00B0F0;
-}
-nav a:hover{
-color:#E554B4;
-border-bottom:2px solid #E554B4;
-}
-.under_contents{
-	margin: 0 auto;
-	width: 100%;
-	background-image: url("../images/background.png");
-	background-size: 15%;
-	box-sizing: border-box;
-	padding:15px 30px;
-}
-.under_contents div{
-	width: 98%;
-	max-width: 980px;
-	margin: 0 auto;
-	height: auto;
-	text-align: center;
-	margin-top:30px;
-	margin-bottom: 30px;
-	padding:30px;
-	background: #ffffff;
-	border-radius: 10px;
-	box-sizing: border-box;
-	
-}
-.under_contents p,.under_contents li{
-	text-align: left;
-	margin: 0 auto; 
-}
-.under_contents li{
-	list-style: none;
-}
-table{
-	margin-bottom: 10px;
-}
-table tbody td,th{
-	text-align: left;
-	border: solid 1px #464646;
-}
-tr{
-	width: 60%;
-	
-}
-th{
-	width: 15%;
-	padding:15px;
-	color: #ffffff;
-	background:#5E5E5E;}
-td{
-	width: 70%;
-	padding: 15px;
-}
-.surcle_all{
-	box-sizing: border-box;
-padding: 10px;
-	display: flex;
-	flex-flow: wrap;
-}
-.surcle_all div{
-	width: 20%;
-	padding: 0 5px;
-}
-.button{
-	position: fixed;
-	bottom: 8%;
-	right:0;
-	background-image: url("../images/waiwoositemi.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size:auto;
-	min-width: 20%;
-	height: 15%;
-	color:
-rgba(0,0,0,0.00);
-}
-.button:hover{
-	background-image: url("../images/ueniikude.svg");
-}
-footer{
-	width: 100%;
-	　margin: 30px;
-	padding: 10px;
-	background:#ffffff;
-	font-size: 10pt;
-	text-align: center;
-}
+<link href="css/html5reset-1.6.1.css" rel="stylesheet" type="text/css">
+	<link href="css/design.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap&subset=cyrillic,japanese" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slider-pro.css" media="screen" />
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<script src="/js/html5shiv.js"></script>
+<![endif]-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.sliderPro.min.js"></script>
+	<script>$(function () {
+ var headerHight = 100; //ヘッダの高さ
+ $('a[href^=#]').click(function(){
+     var href= $(this).attr("href");
+       var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
+     $("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+   });
+});</script>
+	<script>
+		$( document ).ready(function( $ ) {
+  $('#thumb-h').sliderPro({
+    width:980,//横幅
+	  height:420,
+    buttons: false,//ナビゲーションボタン
+    shuffle: true,//スライドのシャッフル
+    thumbnailWidth: 150,//サムネイルの横幅
+    thumbnailHeight:80,//サムネイルの縦幅
+    slideDistance:0,//スライド同士の距離
+    breakpoints: {
+      480: {//表示方法を変えるサイズ
+        thumbnailWidth: 110,
+        thumbnailHeight: 40
+      }
+    }
+  });
+});
+	</script>
+</head>
 
-  /*300px以上で適用する内容*/
-}@media screen and (max-width:300px){
-	.slider{
-	padding-top: 30%;
-}
-  /*300px以上で適用する内容*/
-}
-
-@media screen and (max-width:600px){
-  .slider{
-	padding-top: 20%;
-}/*600px以上で適用する内容*/
+<body>
+<header>
+	<div id="toppage2"></div>
+	<div id="top">
+		<h1><a href="#toppage2"><img src="images/title.svg" alt="十色net　トイロネット"/></a></h1>
+	<nav>
+<ul>
+<li><a href="#news">News</a></li>
+<li><a href="#bosyu">募集</a></li>
+<li><a href="#surcle">サークル</a></li>
+	<li><a href="#oshinagaki">お品書き</a></li>
+</ul>
+</nav>
+</div>
 	
-}
+  <div class="slider">
+	<div id="thumb-h" class="slider-pro">
+  <div class="sp-slides">
+    <div class="sp-slide">
+      <img class="sp-image" src="images/slider/kokuchi1.png" />
+    </div>
+    <div class="sp-slide">
+      <img class="sp-image" src="images/slider/kokuchi2.png" />
+    </div>
+  <!--/ sp-slides--></div>
+  <div class="sp-thumbnails">
+    <img class="sp-thumbnail" src="images/slider/kokuchi1.png"/>
+    <img class="sp-thumbnail" src="images/slider/kokuchi2.png"/>
+    
+  </div>
+<!--/ thumb-h--></div></div>
 
-
-@media screen and (max-width:1200px){
-  .slider{
-	padding-top: 15%;
-}/*600px以上で適用する内容*/
-	
-}
+</header>
+<div class="all">
+  <div class="under_contents">
+   <div id="news"> <h2>News</h2>
+	   <h3>第1回十色オリエンテーリング（仮）開催決定！</h3>
+	   <p style="margin-bottom: 15px;">交流企画として広がった「十色高校」参加者同士で関連の同人誌を持ち寄り、交流しようといういわゆる交流会（オフ）です。オンリーイベントを謳っていますが、完全なる内輪イベントとなりますのでご注意ください。（参加者は予め募集を行います）</p>
+  </div>
+  <div id="bosyu">
+    <h2 style="padding-bottom: 0;">募集要項</h2>
+	  <div class="text" style="padding-top: 0;">
+	   <h3 style="padding-top: 0;">開催</h3>
+	  <p>開催日時：2020年4月25日（土）10:00～18:00<br/>
+場所：東京都内（内輪イベントのためこのホームページ、ツイートでは非公開とします）</p>
+	  <h3>参加資格</h3>
+	  <ul>
+		  <li>主催者（<a href="https://twitter.com/yumeka_sub_" target="_blank">@yumeka_sub_</a>）と相互フォローであること</li>
+	  <li>年齢確認に応じられる方（18歳以上を対象にした頒布物があるため）<br/>
+		  ※現在十色コンテンツへの参加者全員を把握出来てはおりませんので、お手数ですがお声掛け頂けましたら相互フォローにさせて頂きます。（フォローについてはオンリー参加と関係なくお声掛けください！）</li>
+	  
+	  </ul>
+	  <h3>募集期間</h3>
+	  <p>一般参加・サークル参加受付〆切：〜2020/3/8<br/>
+		 サークル参加者サークルカット〆切：後日お知らせいたします。
+	  </p>
+	  <h3>参加形態（選択制）</h3> 
+	  <table>
+		  <tbody>
+			  <tr>
+		  <th>サークル参加</th>
+			  <td>参加者を対象にした頒布物のある方。<br/>
+			  収入が見込まれる分一般参加に比べて参加費が高くなります。</td>
+			  </tr>
+			  <tr>
+				  <th>一般参加</th>
+			  <td>参加者を対象にした頒布物がない方。<br/>
+			  特定の方のみとやり取りする場合は一般参加で構いません。（ただし対象人数が多い場合はご相談下さい）<br/>
+サークル参加よりも参加費が安くなります。</td>
+		  </tr>
+		  </tbody>
+	  </table>
+	 <h3>参加費</h3>
+	  <ul>
+		  <li>参加人数による<br/>
+		  場所代・部屋割＋昼食代（3000～4000円程度を予定）<br/>
+			  ※学生の方には学割、途中参加などは考慮します。<br/>※当日支払いとなります</li>
+	  </ul>
+<h3>年齢確認について</h3>
+		 <ul> 
+			 <li>
+予め主催の方で年齢確認を致します。当日、18歳以上の方のみ、ひと目で確認出来るようなものを配布致します。（ステッカー、カード、リストバンド等）R18作品の購入の際に必要となります。最終的に18歳未満の参加者がいない場合も、年齢確認済の証として配布致します。ご協力お願い致します。</li>
+	  </ul>
+<h3>頒布物について</h3>
+		  <ul>
+			  <li>・十色高校関係の頒布物が必須です。</li>
+		  <li>・オリジナル作品の頒布も可能です。</li>
+		  <li>・版権作品の頒布は禁止</li>
+		  <li>・市販物の頒布は禁止（無料配布◎）</li>
+		  <li>・自作の食品/化粧品などの販売は禁止</li>
+<h3>警告〈委託について〉</h3>
+		  <li>・当日参加出来ない方も、委託参加が可能です。サークル参加される方に個別で連絡を取り交渉してください。</li>
+		  <li>・規定は設けませんが、委託料、販売手数料などサークルの方と必ず合意した上で頒布物の受け渡しを行ってください。</li>
+		  <li>・主催者への委託は出来ません。</li>
+		  <li>・委託のトラブルについての責任は負いかねます。ご了承ください。</li>
+	  </ul>
+   </div>
+  </div>
+  <div id="surcle">
+    <h2>サークル一覧</h2>
+	   <div>
+		  coming sooon!</div>
+	  <!--<div class="surcle_all">
+	  <div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div>
+      <div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div><div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div><div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div><div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div><div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div><div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div><div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div>
+	  <div><a>
+      <img src="images/surcle/Template21182_638-945.png" width="5317" height="7875" alt=""/><p>サークル名</p><p>名前</p></a></div>
+	  </div>-->
+	  </div>
+	  <div id="oshinagaki">
+    <h2>おしながき</h2>
+		  <div>
+		  coming sooon!</div>
+  </div>
+	  </div>
+</div>
+	<div id="toppage" class="link"><a class="button" href="#toppage2">top</a></div>
+<footer>
+	<p>Copyright © 2020 toiro project Inc. All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
