@@ -17,22 +17,12 @@
 <script src="js/respond.min.js"></script>
 <script src="js/html5shiv.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="path/to/jquery.sliderPro.min.js">
+<script src="js/jquery.sliderPro.min.js"></script>
 <script>
 $(function(){
 	$('#slider-pro').sliderPro();
 });
 </script>
-<script>jQuery(function () {
- var headerHight = 100; //ヘッダの高さ
- jQuery('a[href^=#]').click(function(){
-     var href= jQuery(this).attr("href");
-       var target = jQuery(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
-     jQuery("html, body").animate({scrollTop:position}, 550, "swing");
-        return false;
-   });
-});</script>
 <script>
 jQuery( document ).ready(function( jQuery ) {
   jQuery('#thumb-h').sliderPro({
@@ -52,6 +42,16 @@ jQuery( document ).ready(function( jQuery ) {
   });
 });
 	</script>
+	<script>jQuery(function () {
+ var headerHight = 100; //ヘッダの高さ
+ jQuery('a[href^=#]').click(function(){
+     var href= jQuery(this).attr("href");
+       var target = jQuery(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
+     jQuery("html, body").animate({scrollTop:position}, 550, "swing");
+        return false;
+   });
+});</script>
 
 </head>
 
