@@ -18,41 +18,13 @@
 <script src="/js/html5shiv.js"></script>
 <script src="js/jquery.sliderPro.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+<script src="sliderk.js"></script>
 
 </head>
 
 <body>
 <header>
-	<script>$(function () {
- var headerHight = 100; //ヘッダの高さ
- $('a[href^=#]').click(function(){
-     var href= $(this).attr("href");
-       var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
-     $("html, body").animate({scrollTop:position}, 550, "swing");
-        return false;
-   });
-});</script>
-<script>
-$( document ).ready(function( $ ) {
-  $('#thumb-h').sliderPro({
-    width:980,//横幅
-	  height:420,
-    buttons: false,//ナビゲーションボタン
-    shuffle: true,//スライドのシャッフル
-    thumbnailWidth: 150,//サムネイルの横幅
-    thumbnailHeight:80,//サムネイルの縦幅
-    slideDistance:0,//スライド同士の距離
-    breakpoints: {
-      480: {//表示方法を変えるサイズ
-        thumbnailWidth: 110,
-        thumbnailHeight: 40
-      }
-    }
-  });
-});
-	</script>
+	
 	<div id="toppage2"></div>
 	<div id="top">
 		<h1><a href="#toppage2"><img src="images/title.svg" alt="十色net　トイロネット"/></a></h1>
